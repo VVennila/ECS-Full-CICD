@@ -3,13 +3,13 @@ name: Deploy to Amazon ECS
 on:
   push:
     branches:
-      - main
+      - dev
                                                
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    environment: ${{ github.ref_name }}
+    environment: dev
 
     steps:
     - name: Checkout
